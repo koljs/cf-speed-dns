@@ -3,7 +3,8 @@ name: 'dns_cf_push'
 on:
   schedule:
     - cron: '0 */6 * * *'
-
+  workflow_dispatch:  # 新增这行，明确支持手动触发
+  
 jobs:
   build:
     runs-on: ubuntu-latest
